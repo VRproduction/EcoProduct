@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EcoProduct</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_black.svg' %}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <!-- Favicon -->
+
+  
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+
+<body>
+    <header class="header-area header-style-1 header-height-2">
+
+        <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+            <div class="container">
+                <div class="header-wrap">
+                    <div class="logo logo-width-1">
+                        <a href="#"><img src="{% static 'logo_black.svg' %}" alt="logo"></a>
+                    </div>
+                    <div class="header-right">
+                        <div class="search-style-2">
+                            <form action="#">
+                                <select class="select-active">
+                                    <option>Bütün kateqorilər</option>
+                                    {% for category in categories %}
+                                    <option>{{ category.name }}</option>
+                                    {% endfor %}
+                                </select>
+                                <input type="text" placeholder="Məhsullarda axtar">
+                            </form>
+                        </div>
+                        <div class="header-action-right">
+                            <div class="header-action-2" id="header-action-23">
+                      
+
+                                <div class="header-action-icon-2">
+                                    <a href="#">
+                                        <img class="svgInject" alt="eco" src="{% static 'images/icon-heart.svg' %}">
+                                        <span class="pro-count blue">0</span>
+                                    </a>
+                                    <a href="#"><span class="lable">Favorilər</span></a>
+                                </div>
+                                <div class="header-action-icon-2">
+                                    <a class="mini-cart-icon" href="#">
+                                        <img alt="eco" src="{% static 'images/icon-cart.svg' %}">
+                                        <span class="pro-count blue">0</span>
+                                    </a>
+                                    <a href="#"><span class="lable">Səbət</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                        <ul>
+                                            <li>
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="eco" src="{% static 'on.png' %}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">Məhsul 1</a></h4>
+                                                    <h4><span>1 × </span>20.00 azn</h4>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="eco" src="{% static 'arxa.png' %}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">Məhsul 2</a></h4>
+                                                    <h4><span>1 × </span>40.00 azn</h4>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="shopping-cart-footer">
+                                            <div class="shopping-cart-total">
+                                                <h4>Cəm <span>60.00 azn</span></h4>
+                                            </div>
+                                            <div class="shopping-cart-button">
+                                                <a href="#" class="outline">Səbətə bax</a>
+                                                <a href="#">Rəsmiləşdir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-action-icon-2 mouse">
+                                    <a href="#">
+                                        <img class="svgInject" alt="eco" src="{% static 'images/icon-user.svg' %}">
+                                    </a>
+                                    <a href="#"><span class="lable ml-0">Account</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-user mr-10"></i>Hesab</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-label mr-10"></i>Sifariş tarixçəsi</a>
+                                            </li>
+                                         
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-heart mr-10"></i>favorilər</a>
+                                            </li>
+                                       
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-sign-out mr-10"></i>Çıxış</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom header-bottom-bg-color sticky-bar header_bg_red">
+            <div class="container">
+                <div class="header-wrap header-space-between position-relative">
+                    <div class="logo logo-width-1 d-block d-lg-none">
+                        <a href="#"><img id="logomobile" style="max-height: 50px;max-width: 40px;" src="{% static 'logo_white.png' %}" alt="logo"></a>
+                    </div>
+                    <div class="header-nav d-none d-lg-flex">
+                        <div class="main-categori-wrap d-none d-lg-block categories-button-active ">
+                      
+                        </div>
+                        <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a  href="{% url 'home' %}">Ana Səhifə</a>
+
+                                    </li>
+                                    <li>
+                                        <a class="active" href="{% url 'about' %}">Haqqında</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'shop' %}">Məhsullar</a>
+
+                                    </li>
+
+
+                                    <li>
+                                        <a href="{% url 'blog' %}">Bloq </a>
+
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'contact' %}">Əlaqə</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="header-action-icon-2 d-block d-lg-none">
+                        <div class="burger-icon burger-icon-white">
+                            <span class="burger-icon-top"></span>
+                            <span class="burger-icon-mid"></span>
+                            <span class="burger-icon-bottom"></span>
+                        </div>
+                    </div>
+                    <div class="header-action-right d-block d-lg-none">
+                        <div class="header-action-2">
+                            <div class="header-action-icon-2">
+                                <a href="#">
+                                    <img alt="eco" src="{% static 'images/icon-heart.svg' %}">
+                                    <span class="pro-count white">0</span>
+                                </a>
+                            </div>
+                            <div class="header-action-icon-2">
+                                <a class="mini-cart-icon" href="#">
+                                    <img alt="eco" src="{% static 'images/icon-cart.svg' %}">
+                                    <span class="pro-count white">0</span>
+                                </a>
+                                <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                    <ul>
+                                        <li>
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="eco" src="{% static 'on.png' %}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="#">Məhsul 1</a></h4>
+                                                <h4><span>1 × </span>20.00 azn</h4>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="eco" src="{% static 'arxa.png' %}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="#">Məhsul 2</a></h4>
+                                                <h4><span>1 × </span>40.00 azn</h4>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-cart-footer">
+                                        <div class="shopping-cart-total">
+                                            <h4>Cəm <span>60.00 azn</span></h4>
+                                        </div>
+                                        <div class="shopping-cart-button">
+                                            <a href="#" class="outline">Səbətə bax</a>
+                                            <a href="#">Rəsmiləşdir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action-icon-2 mouse">
+                                <a href="#">
+                                    <img class="svgInject" alt="eco" src="{% static 'images/icon-user.svg' %}">
+                                </a>
+                                <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-user mr-10"></i>Hesab</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-label mr-10"></i>Sifariş tarixçəsi</a>
+                                        </li>
+                                     
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-heart mr-10"></i>favorilər</a>
+                                        </li>
+                                   
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-sign-out mr-10"></i>Çıxış</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-header-active mobile-header-wrapper-style">
+        <div class="mobile-header-wrapper-inner">
+            <div class="mobile-header-top">
+                <div class="mobile-header-logo">
+                    <a href="#"><img src="{% static 'logo_black.svg' %}" alt="logo"></a>
+                </div>
+                <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
+                    <button class="close-style search-close">
+                        <i class="icon-top"></i>
+                        <i class="icon-bottom"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-header-content-area">
+                <div class="mobile-search search-style-3 mobile-header-border">
+                    <form action="#">
+                        <input type="text" placeholder="Məhsullarda axtar">
+                        <button type="submit"><i class="fi-rs-search"></i></button>
+                    </form>
+                </div>
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <!-- mobile menu start -->
+                    <nav>
+                        <ul class="mobile-menu font-heading">
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'home' %}">Ana Səhifə</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'about' %}">Haqqında</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'shop' %}">Məhsullar</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'blog' %}">Bloq</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'contact' %}">Əlaqə</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Dillər</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">Azerbaijan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
+                </div>
+                <div class="mobile-header-info-wrap">
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-marker"></i> Our location </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-user"></i>Baku, Azerbaijan </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-headphones"></i>(+994) 51 000 00 00 </a>
+                    </div>
+                </div>
+                <div class="mobile-social-icon mb-50">
+                    <h6 class="mb-15">Follow Us</h6>
+                    <a href="#"><img src="{% static 'images/icon-facebook-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-twitter-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-instagram-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-pinterest-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-youtube-white.svg' %}" alt=""></a>
+                </div>
+                <div><a class="site-copyright" href="https://vrproduction.az/">© VR Production 2023 Bütün hüquqlar qorunur!</a></div>
+            </div>
+        </div>
+    </div>
+    <!--End header-->
+    <!-- about section start? -->
+    <div class="page-header mt-30 mb-50 ">
+        <div class="container">
+            <div class="archive-header">
+                <div class="row align-items-center">
+                    <h1 style="justify-content: center;display: flex;" class="mb-15">Haqqımızda</h1>
+                    <div style="justify-content: center;display: flex;">
+
+                        <div class="breadcrumb">
+                        
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-content pt-30  pb-30">
+        <div class="container section1">
+            <div class="row">
+                <div class="col-xl-10 col-lg-12 m-auto">
+                    <section class="row align-items-center mb-50">
+                        <div class="col-lg-6 text-center">
+                            <img src="{% static 'noimage.jpg' %}" alt="" class="border-radius-15 mb-md-3 mb-lg-0 mb-sm-4 img_about">
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <div class="nestt pl-25">
+                                <h2 class="mb-30">Ecoproductla daha sağlam</h2>
+                                <p class="mb-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                    aute irure dolor in reprehenderit in voluptate id est laborum.</p>
+                                <p class="mb-50">Ius ferri velit sanctus cu, sed at soleat accusata. Dictas prompta et
+                                    Ut placerat legendos interpre.Donec vitae sapien ut libero venenatis faucibus.
+                                    Nullam quis ante Etiam sit amet orci eget. Quis commodo odio aenean sed adipiscing.
+                                    Turpis massa tincidunt dui ut ornare lectus. Auctor elit sed vulputate mi sit amet.
+                                    Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate id est
+                                    laborum.</p>
+                                <div class="carausel-3-columns-cover position-relative mobile_about_slider pt-45">
+                                    <div class="carausel-3-columns " id="carausel-3-columns">
+                                        <img class="about_img_border" src="{% static 'noimage.jpg' %}" alt="">
+                                        <img class="about_img_border" src="{% static 'noimage.jpg' %}" alt="">
+                                        <img class="about_img_border" src="{% static 'noimage.jpg' %}" alt="">
+                                        <img class="about_img_border" src="{% static 'noimage.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+        <section class="container mb-50 d-none 
+            ">
+            <div class="row about-count">
+                <div class="col-lg-1-5 col-md-6 text-center mb-lg-0 mb-md-5">
+                    <h1 class="heading-1"><span class="count">12</span>+</h1>
+                    <h4>Glorious years</h4>
+                </div>
+                <div class="col-lg-1-5 col-md-6 text-center">
+                    <h1 class="heading-1"><span class="count">36</span>+</h1>
+                    <h4>Happy clients</h4>
+                </div>
+                <div class="col-lg-1-5 col-md-6 text-center">
+                    <h1 class="heading-1"><span class="count">58</span>+</h1>
+                    <h4>Projects complete</h4>
+                </div>
+                <div class="col-lg-1-5 col-md-6 text-center">
+                    <h1 class="heading-1"><span class="count">24</span>+</h1>
+                    <h4>Team advisor</h4>
+                </div>
+                <div class="col-lg-1-5 text-center d-none d-lg-block">
+                    <h1 class="heading-1"><span class="count">26</span>+</h1>
+                    <h4>Products Sale</h4>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <section class="featured section-padding pb-30 pt-30">
+        <div class="container">
+            <div class="row">
+                {% for icon in icons %}
+                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0">
+                    <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                        <div class="banner-icon">
+                            <img src="{{icon.icon.url}}" alt="">
+                        </div>
+                        <div class="banner-text">
+                            <h3 class="icon-box-title">{{icon.title}}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <div class="container ">
+
+        <section class="row align-items-center mb-50 pt-30 aboutt section2">
+            <div class="row mb-50 align-items-center aboutt">
+                <div class="col-lg-7 pr-30 ab-img">
+                    <img src="{% static 'noimage.jpg' %}" alt="" class="mb-md-3 mb-lg-0 mb-sm-4 ">
+                </div>
+                <div class="col-lg-5">
+                    <h4 class="mb-20 text-muted">Daha sağlam yaşa</h4>
+                    <h1 class="heading-1 mb-40">Ecoproduct</h1>
+                    <p class="mb-30 txtt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </h1>
+
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- about section end? -->
+
+  
+
+    <!--End banners-->
+
+
+
+
+
+
+
+
+    <section class="section-padding pb-30 pt-30">
+        <div class="container">
+            <div class="section-title wow animate__animated animate__fadeIn">
+                <h3 class="">Tərəfdaşlarımız</h3>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-3 d-none d-lg-flex wow animate__animated animate__fadeIn">
+                    <div class="banner-img style-2" style="height: 100% !important;">
+                        <div class="banner-text">
+                            <h2 id="changedh2"  class="mb-100"> Tərəfdaşlarımız
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-12 wow animate__animated animate__fadeIn " data-wow-delay=".4s">
+                    <div class="tab-content" id="myTabContent-1">
+                        <div class="tab-pane fade show active" id="tab-one-1" role="tabpanel"
+                            aria-labelledby="tab-one-1">
+                            <div class="carausel-4-columns-cover arrow-center position-relative">
+                                <div class="slider-arrow slider-arrow-2 carausel-4-columns-arrow"
+                                    id="carausel-4-columns-arrows">
+                                </div>
+                                <div class="carausel-3-columns carausel-arrow-center" id="carausel-4-columns">
+                               
+                                    <!--End product Wrap-->
+                                    {% for partner in partners %}
+                                    <div class="team-card">
+                                        <img src="{{partner.image.url}}" alt="img">
+                                    </div>
+                                    {% endfor %}
+                                    <!--End product Wrap-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--End tab-pane-->
+                        <div class="tab-pane fade" id="tab-two-1" role="tabpanel" aria-labelledby="tab-two-1">
+                            <div class="carausel-4-columns-cover arrow-center position-relative">
+                                <div class="slider-arrow slider-arrow-2 carausel-4-columns-arrow"
+                                    id="carausel-4-columns-2-arrows"></div>
+                                <div class="carausel-4-columns carausel-arrow-center" id="carausel-4-columns-2">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="{% static 'images/product-10-1.jpg" alt="">
+                                                    <img class="hover-img" src="{% static 'images/product-10-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Save 15%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Canada Dry Ginger Ale – 2 L
+                                                    Bottle</a></h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="images/product-15-1.jpg" alt="">
+                                                    <img class="hover-img" src="images/product-15-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">Save 35%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Encore Seafoods Stuffed
+                                                    Alaskan</a></h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="images/product-12-1.jpg" alt="">
+                                                    <img class="hover-img" src="images/product-12-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Gorton’s Beer Battered Fish </a>
+                                            </h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="images/product-13-1.jpg" alt="">
+                                                    <img class="hover-img" src="images/product-13-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">Best sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Haagen-Dazs Caramel Cone Ice</a>
+                                            </h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="images/product-14-1.jpg" alt="">
+                                                    <img class="hover-img" src="images/product-14-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Save 15%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Italian-Style Chicken Meatball</a>
+                                            </h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-three-1" role="tabpanel" aria-labelledby="tab-three-1">
+                            <div class="carausel-4-columns-cover arrow-center position-relative">
+                                <div class="slider-arrow slider-arrow-2 carausel-4-columns-arrow"
+                                    id="carausel-4-columns-3-arrows"></div>
+                                <div class="carausel-4-columns carausel-arrow-center" id="carausel-4-columns-3">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="{% static 'images/product-7-1.jpg' %}" alt="">
+                                                    <img class="hover-img" src="{% static 'images/product-7-2.jpg' %}" alt="">
+                                                </a>
+                                            </div>}
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Save 15%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Perdue Simply Smart Organics
+                                                    Gluten Free</a></h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="{% static 'images/product-8-1.jpg' %}" alt="">
+                                                    <img class="hover-img" src="{% static 'images/product-8-2.jpg' %}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">Save 35%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Seeds of Change Organic Quinoa</a>
+                                            </h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="{% static 'images/product-9-1.jpg' %}" alt="">
+                                                    <img class="hover-img" src="{% static 'images/product-9-2.jpg' %}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Signature Wood-Fired Mushroom</a>
+                                            </h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="{% static 'images/product-13-1.jpg' %}" alt="">
+                                                    <img class="hover-img" src="{% static 'images/product-13-2.jpg' %}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">Best sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Simply Lemonade with Raspberry
+                                                    Juice</a></h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="#">
+                                                    <img class="default-img" src="{% static 'images/product-14-1.jpg' %}" alt="">
+                                                    <img class="hover-img" src="{% static 'images/product-14-2.jpg' %}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Quick view" class="action-btn small hover-up"
+                                                    data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i
+                                                        class="fi-rs-eye"></i></a>
+                                                <a aria-label="Add To Wishlist" class="action-btn small hover-up"
+                                                    href="#"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn smareqemlerll hover-up"
+                                                    href="#"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Save 15%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="#">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="#">Organic Quinoa, Brown, &amp; Red
+                                                    Rice</a></h2>
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <div class="product-price mt-10">
+                                                <span>$238.85 </span>
+                                                <span class="old-price">$245.8</span>
+                                            </div>
+                                            <div class="sold mt-15 mb-15">
+                                                <div class="progress mb-5">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="font-xs text-heading"> Sold: 90/120</span>
+                                            </div>
+                                            <a href="#" class="btn w-100 hover-up"><i
+                                                    class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                        </div>
+                                    </div>
+                                    <!--End product Wrap-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End tab-content-->
+                </div>
+                <!--End Col-lg-9-->
+            </div>
+
+
+            <!-- artan reqemler -->
+
+        </div>
+    </section>
+    <section class="newsletter pb-30 pt-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="position-relative newsletter-inner">
+                        <div class="newsletter-content">
+                            <h2 class="mb-20">
+                                Some Lorem Text &amp; Dont Spend Time <br>
+                                To read this text
+                            </h2>
+                            <p class="mb-45">Just listen lana del rey <span class="text-brand">and eat ecoproduct</span></p>
+                            <form class="form-subcriber d-flex" style="max-width: 173px;">
+                                <a href="#">
+                                    <button class="btn">Alışverişə Başla</button>
+                                </a>
+
+                            </form>
+                        </div>
+                        <img style="max-height:340px" src="{% static 'noimage.jpg' %}" alt="newsletter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <footer class="main footer_desktop">
+
+
+        <section class="section-padding footer-mid">
+
+            <div class="container pt-15 pb-20 pr-30 pl-30" id="mypadding">
+                <div class="row">
+                    <div class="logo mb-30 slogan">
+                        <a href="#" class="mb-15 "><img style="height:120px;" src="{% static 'logo_black.svg' %}" alt="logo"></a>
+                        <p class="font-lg text-heading">Ecoproductla daha sağlam yaşa !</p>
+                    </div>
+
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp">
+
+                        <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0 wow animate__animated animate__fadeInUp"
+                            data-wow-delay="0">
+
+                            <div style="justify-content: center;">
+
+                                <iframe class="mapp-my" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24313.687103710025!2d49.858787449604726!3d40.38201843056972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d0b5c0c755d%3A0xc0c10a39029757cd!2sDental%20Expert!5e0!3m2!1sen!2saz!4v1697460618706!5m2!1sen!2saz"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp  " data-wow-delay=".2s">
+                        <div class="mycenterclass">
+                            <h4 class="widget-title">SOSİAL ŞƏBƏKƏ </h4>
+                            <ul class="footer-list mb-sm-5 mb-md-0">
+                                <li><a href="#">İnstagram</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Youtuba</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp " data-wow-delay=".3s">
+                        <div class="mycenterclass">
+                            <h4 class="widget-title">LİNKLƏR</h4>
+                            <ul class="footer-list mb-sm-5 mb-md-0">
+                                <li><a href="#">Ana Səhifə</a></li>
+                                <li><a href="#">Haqqında</a></li>
+                                <li><a href="#">Məhsullar</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Əlaqə</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                        <div class="mycenterclass">
+                            <h4 class="widget-title">BİZİMLƏ ƏLAQƏ</h4>
+                            <ul class="footer-list mb-sm-5 mb-md-0">
+                                <li><a href="#">nomre:</a></li>
+                                <li><a href="#">nomre:</a></li>
+                                <li><a href="#">email:</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="container pb-30 wow animate__animated animate__fadeInUp" data-wow-delay="0">
+            <div class="row align-items-center">
+                <div class="col-12 mb-30">
+                    <div class="footer-bottom"></div>
+                </div>
+                <div><a href="https://vrproduction.az/">© VR Production 2023 Bütün hüquqlar qorunur!</a></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="{% static 'Spinner-3.gif' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const openDiv = document.querySelector(".open-div");
+        const popup = document.querySelector("#myPopup");
+    
+        openDiv.addEventListener("click", function () {
+            popup.style.display = "block";
+        });
+    
+        // Sayfa herhangi bir yere tıklandığında popup'ı kapat
+        document.addEventListener("click", function (event) {
+            if (event.target !== openDiv && event.target !== popup) {
+                popup.style.display = "none";
+            }
+        });
+    });
+    </script>
+    <style>
+        @media (max-width: 1400px) {
+        #changedh2{
+            font-size:26px !important;
+            font-weight:600 ;
+        }}
+        @media (max-width: 500px) {
+        #logomobile{
+            display: none !important;
+        }}
+    </style>
+    <!-- Vendor JS-->
+    <script data-cfasync="false" src="{% static 'js/email-decode.min.js' %}"></script>
+    <script src="{% static 'js/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.3.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/jquery.syotimer.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'js/magnific-popup.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.js' %}"></script>
+    <script src="{% static 'js/counterup.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/images-loaded.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+    <script src="{% static 'js/scrollup.js' %}"></script>
+    <script src="{% static 'js/jquery.vticker-min.js' %}"></script>
+    <script src="{% static 'js/jquery.theia.sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.elevatezoom.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/shop.js' %}"></script>
+
+
+</body>
+
+</html>

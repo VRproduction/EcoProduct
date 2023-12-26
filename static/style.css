@@ -1,0 +1,9 @@
+.logo.logo-width-1 {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.logo.logo-width-1 a img {
+    width: 100px;
+    min-width: 100px;
+}

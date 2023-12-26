@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="en"><head>
+    <meta charset="utf-8">
+    <title>EcoProduct</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_black.svg' %}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header class="header-area header-style-1 header-height-2">
+
+        <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+            <div class="container">
+                <div class="header-wrap">
+                    <div class="logo logo-width-1">
+                        <a href="#"><img src="{% static 'logo_black.svg' %}" alt="logo"></a>
+                    </div>
+                    <div class="header-right">
+                        <div class="search-style-2">
+                            <form action="#">
+                                <select class="select-active">
+                                    <option>Bütün kateqorilər</option>
+                                    {% for category in categories %}
+                                    <option>{{ category.name }}</option>
+                                    {% endfor %}
+                                </select>
+                                <input type="text" placeholder="Məhsullarda axtar">
+                            </form>
+                        </div>
+                        <div class="header-action-right">
+                            <div class="header-action-2" id="header-action-23">
+                      
+
+                                <div class="header-action-icon-2">
+                                    <a href="#">
+                                        <img class="svgInject" alt="eco" src="{% static 'images/icon-heart.svg' %}">
+                                        <span class="pro-count blue">0</span>
+                                    </a>
+                                    <a href="#"><span class="lable">Favorilər</span></a>
+                                </div>
+                                <div class="header-action-icon-2">
+                                    <a class="mini-cart-icon" href="#">
+                                        <img alt="eco" src="{% static 'images/icon-cart.svg' %}">
+                                        <span class="pro-count blue">0</span>
+                                    </a>
+                                    <a href="#"><span class="lable">Səbət</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                        <ul>
+                                            <li>
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="eco" src="{% static 'on.png' %}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">Məhsul 1</a></h4>
+                                                    <h4><span>1 × </span>20.00 azn</h4>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="eco" src="{% static 'arxa.png' %}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">Məhsul 2</a></h4>
+                                                    <h4><span>1 × </span>40.00 azn</h4>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="shopping-cart-footer">
+                                            <div class="shopping-cart-total">
+                                                <h4>Cəm <span>60.00 azn</span></h4>
+                                            </div>
+                                            <div class="shopping-cart-button">
+                                                <a href="#" class="outline">Səbətə bax</a>
+                                                <a href="#">Rəsmiləşdir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-action-icon-2 mouse">
+                                    <a href="#">
+                                        <img class="svgInject" alt="eco" src="{% static 'images/icon-user.svg' %}">
+                                    </a>
+                                    <a href="#"><span class="lable ml-0">Account</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-user mr-10"></i>Hesab</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-label mr-10"></i>Sifariş tarixçəsi</a>
+                                            </li>
+                                         
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-heart mr-10"></i>favorilər</a>
+                                            </li>
+                                       
+                                            <li>
+                                                <a href="#"><i class="fi fi-rs-sign-out mr-10"></i>Çıxış</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom header-bottom-bg-color sticky-bar header_bg_red">
+            <div class="container">
+                <div class="header-wrap header-space-between position-relative">
+                    <div class="logo logo-width-1 d-block d-lg-none">
+                        <a href="#"><img id="logomobile" style="max-height: 50px;max-width: 40px;" src="{% static 'logo_white.png' %}" alt="logo"></a>
+                    </div>
+                    <div class="header-nav d-none d-lg-flex">
+                        <div class="main-categori-wrap d-none d-lg-block categories-button-active ">
+                      
+                        </div>
+                        <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a  href="{% url 'home' %}">Ana Səhifə</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'about' %}">Haqqında</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'shop' %}">Məhsullar</a>
+
+                                    </li>
+
+
+                                    <li>
+                                        <a class="active" href="{% url 'blog' %}">Bloq </a>
+
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'contact' %}">Əlaqə</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="header-action-icon-2 d-block d-lg-none">
+                        <div class="burger-icon burger-icon-white">
+                            <span class="burger-icon-top"></span>
+                            <span class="burger-icon-mid"></span>
+                            <span class="burger-icon-bottom"></span>
+                        </div>
+                    </div>
+                    <div class="header-action-right d-block d-lg-none">
+                        <div class="header-action-2">
+                            <div class="header-action-icon-2">
+                                <a href="#">
+                                    <img alt="eco" src="{% static 'images/icon-heart.svg' %}">
+                                    <span class="pro-count white">0</span>
+                                </a>
+                            </div>
+                            <div class="header-action-icon-2">
+                                <a class="mini-cart-icon" href="#">
+                                    <img alt="eco" src="{% static 'images/icon-cart.svg' %}">
+                                    <span class="pro-count white">0</span>
+                                </a>
+                                <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                    <ul>
+                                        <li>
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="eco" src="{% static 'on.png' %}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="#">Məhsul 1</a></h4>
+                                                <h4><span>1 × </span>20.00 azn</h4>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="eco" src="{% static 'arxa.png' %}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="#">Məhsul 2</a></h4>
+                                                <h4><span>1 × </span>40.00 azn</h4>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-cart-footer">
+                                        <div class="shopping-cart-total">
+                                            <h4>Cəm <span>60.00 azn</span></h4>
+                                        </div>
+                                        <div class="shopping-cart-button">
+                                            <a href="#" class="outline">Səbətə bax</a>
+                                            <a href="#">Rəsmiləşdir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action-icon-2 mouse">
+                                <a href="#">
+                                    <img class="svgInject" alt="eco" src="{% static 'images/icon-user.svg' %}">
+                                </a>
+                                <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-user mr-10"></i>Hesab</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-label mr-10"></i>Sifariş tarixçəsi</a>
+                                        </li>
+                                     
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-heart mr-10"></i>favorilər</a>
+                                        </li>
+                                   
+                                        <li>
+                                            <a href="#"><i class="fi fi-rs-sign-out mr-10"></i>Çıxış</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-header-active mobile-header-wrapper-style">
+        <div class="mobile-header-wrapper-inner">
+            <div class="mobile-header-top">
+                <div class="mobile-header-logo">
+                    <a href="#"><img src="{% static 'logo_black.svg' %}" alt="logo"></a>
+                </div>
+                <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
+                    <button class="close-style search-close">
+                        <i class="icon-top"></i>
+                        <i class="icon-bottom"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-header-content-area">
+                <div class="mobile-search search-style-3 mobile-header-border">
+                    <form action="#">
+                        <input type="text" placeholder="Məhsullarda axtar">
+                        <button type="submit"><i class="fi-rs-search"></i></button>
+                    </form>
+                </div>
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <!-- mobile menu start -->
+                    <nav>
+                        <ul class="mobile-menu font-heading">
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'home' %}">Ana Səhifə</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'about' %}">Haqqında</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'shop' %}">Məhsullar</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'blog' %}">Bloq</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'contact' %}">Əlaqə</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Dillər</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">Azerbaijan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
+                </div>
+                <div class="mobile-header-info-wrap">
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-marker"></i> Our location </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-user"></i>Baku, Azerbaijan </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-headphones"></i>(+994) 51 000 00 00 </a>
+                    </div>
+                </div>
+                <div class="mobile-social-icon mb-50">
+                    <h6 class="mb-15">Follow Us</h6>
+                    <a href="#"><img src="{% static 'images/icon-facebook-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-twitter-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-instagram-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-pinterest-white.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'images/icon-youtube-white.svg' %}" alt=""></a>
+                </div>
+                <div><a class="site-copyright" href="https://vrproduction.az/">© VR Production 2023 Bütün hüquqlar qorunur!</a></div>
+            </div>
+        </div>
+    </div>
+    <!--End header-->
+    <main class="main">
+        <div class="page-header mt-30 mb-50 pt-30 pb-30">
+            <div class="container">
+                <div class="archive-header">
+                    <div class="row align-items-center">
+                        <h1 style="justify-content: center;display: flex;" class="mb-15">Bloq</h1>
+                        <div style="justify-content: center;display: flex;">
+                            
+                            <div class="breadcrumb">
+    
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content mb-50 pt-30 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="shop-product-fillter mb-50">
+                            <div class="totall-product pb-10">
+                          
+                            </div>
+                        </div>
+                        <div class="loop-grid">
+                            <div class="row">
+                                {% for blog in blogs %}
+                                <article class="col-xl-3 col-lg-4 col-md-6 text-center hover-up mb-30 animated">
+                                    <div class="post-thumb">
+                                        <a href="">
+                                            <img class="border-radius-15" src="{{blog.image.url}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="entry-content-2">
+                                        <h6 class="mb-10 font-sm"><a class="entry-meta text-muted"
+                                                href="#">{{blog.subject.name}}</a></h6>
+                                        <h4 class="post-title mb-15">
+                                            <a href="#">{{blog.title}}</a>
+                                        </h4>
+                                        <div class="entry-meta font-xs color-grey mt-10 pb-10">
+                                            <div>
+                                                <span class="post-on mr-10">{{blog.created_at}}</span>
+                                                <span class="hit-count has-dot mr-10">{{blog.views}}</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" {% if not blogs.has_previous %}
+                                        disabled="true" style="cursor:not-allowed" 
+                                        {% endif %} {% if blogs.has_previous %}
+                                        href="?page={{ blogs.previous_page_number }}{% endif %}"><i class="fi-rs-arrow-small-left"></i></a>
+                                    </li>
+                                    {% for c in count %}
+                                    <li class="page-item {% if forloop.counter == blogs.number %} active {% endif %}"><a class="page-link" href="?page={{c}}">{{c}}</a></li>
+                                    {% endfor %}
+                                    <li class="page-item">
+                                        <a class="page-link"{% if not blogs.has_next %}
+                                        disabled="true" style="cursor:not-allowed" 
+                                        {% endif %} {% if blogs.has_next %}
+                                        href="?page={{ blogs.next_page_number }}{% endif %}"><i class="fi-rs-arrow-small-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="newsletter pb-30 pt-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="position-relative newsletter-inner">
+                        <div class="newsletter-content">
+                            <h2 class="mb-20">
+                                Some Lorem Text &amp; Dont Spend Time <br>
+                                To read this text
+                            </h2>
+                            <p class="mb-45">Just listen lana del rey <span class="text-brand">and eat ecoproduct</span></p>
+                            <form class="form-subcriber d-flex" style="max-width: 173px;">
+                                <a href="#">
+                                    <button class="btn">Alışverişə Başla</button>
+                                </a>
+
+                            </form>
+                        </div>
+                        <img style="max-height:340px" src="{% static 'noimage.jpg' %}" alt="newsletter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main footer_desktop">
+
+
+        <section class="section-padding footer-mid">
+
+            <div class="container pt-15 pb-20 pr-30 pl-30" id="mypadding">
+                <div class="row">
+                    <div class="logo mb-30 slogan">
+                        <a href="#" class="mb-15 "><img style="height:120px;" src="{% static 'logo_black.svg' %}" alt="logo"></a>
+                        <p class="font-lg text-heading">Ecoproductla daha sağlam yaşa !</p>
+                    </div>
+
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp">
+
+                        <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0 wow animate__animated animate__fadeInUp"
+                            data-wow-delay="0">
+
+                            <div style="justify-content: center;">
+
+                                <iframe class="mapp-my" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24313.687103710025!2d49.858787449604726!3d40.38201843056972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d0b5c0c755d%3A0xc0c10a39029757cd!2sDental%20Expert!5e0!3m2!1sen!2saz!4v1697460618706!5m2!1sen!2saz"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp  " data-wow-delay=".2s">
+                        <div class="mycenterclass">
+                            <h4 class="widget-title">SOSİAL ŞƏBƏKƏ </h4>
+                            <ul class="footer-list mb-sm-5 mb-md-0">
+                                <li><a href="#">İnstagram</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Youtuba</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp " data-wow-delay=".3s">
+                        <div class="mycenterclass">
+                            <h4 class="widget-title">LİNKLƏR</h4>
+                            <ul class="footer-list mb-sm-5 mb-md-0">
+                                <li><a href="#">Ana Səhifə</a></li>
+                                <li><a href="#">Haqqında</a></li>
+                                <li><a href="#">Məhsullar</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Əlaqə</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                        <div class="mycenterclass">
+                            <h4 class="widget-title">BİZİMLƏ ƏLAQƏ</h4>
+                            <ul class="footer-list mb-sm-5 mb-md-0">
+                                <li><a href="#">nomre:</a></li>
+                                <li><a href="#">nomre:</a></li>
+                                <li><a href="#">email:</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="container pb-30 wow animate__animated animate__fadeInUp" data-wow-delay="0">
+            <div class="row align-items-center">
+                <div class="col-12 mb-30">
+                    <div class="footer-bottom"></div>
+                </div>
+                <div><a href="https://vrproduction.az/">© VR Production 2023 Bütün hüquqlar qorunur!</a></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="{% static 'Spinner-3.gif' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const openDiv = document.querySelector(".open-div");
+        const popup = document.querySelector("#myPopup");
+    
+        openDiv.addEventListener("click", function () {
+            popup.style.display = "block";
+        });
+    
+        // Sayfa herhangi bir yere tıklandığında popup'ı kapat
+        document.addEventListener("click", function (event) {
+            if (event.target !== openDiv && event.target !== popup) {
+                popup.style.display = "none";
+            }
+        });
+    });
+    </script>
+    <style>
+        @media (max-width: 1400px) {
+        #changedh2{
+            font-size:20px !important
+        }}
+        @media (max-width: 500px) {
+        #logomobile{
+            display: none !important;
+        }}
+    </style>
+    <!-- Vendor JS-->
+    <script data-cfasync="false" src="{% static 'js/email-decode.min.js' %}"></script><script src="{% static 'js/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.3.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/jquery.syotimer.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'js/magnific-popup.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.js' %}"></script>
+    <script src="{% static 'js/counterup.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/images-loaded.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+    <script src="{% static 'js/scrollup.js' %}"></script>
+    <script src="{% static 'js/jquery.vticker-min.js' %}"></script>
+    <script src="{% static 'js/jquery.theia.sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.elevatezoom.js' %}"></script>
+ 
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/shop.js' %}"></script>
+
+
+</body></html>
